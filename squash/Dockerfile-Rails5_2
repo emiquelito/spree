@@ -6,10 +6,6 @@ RUN mkdir /spree
 WORKDIR /spree
 ADD . /spree
 
-RUN gem 'spree', '~> 3.6.4'
-RUN gem 'spree_auth_devise', '~> 3.3'
-RUN gem 'spree_gateway', '~> 3.3'
-
-RUN bundle install
+RUN bundle install --gemfile=Gemfile5_2
 RUN bundle exec rake sandbox
 CMD ["sh", "docker-entrypoint.sh"]
