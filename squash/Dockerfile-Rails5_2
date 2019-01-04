@@ -1,5 +1,5 @@
-FROM ruby:2.5.2
-RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs
+FROM ubuntu:18.04
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs rubygems
 RUN mkdir /spree
 WORKDIR /spree
 ADD . /spree
