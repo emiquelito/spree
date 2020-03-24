@@ -4,5 +4,3 @@ deployments:
           ./Dockerfile
         vm_size:
           1GB
-        port_forwarding:
-          80:3000
